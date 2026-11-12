@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LS SPORTS | Le sport commence ici</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #171717;
+}
+
+header {
+  background: #111;
+  color: white;
+  padding: 22px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 29px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: #ed2929;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 22px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #ed2929;
+}
+
+.hero {
+  background: linear-gradient(90deg, #111 30%, #333 100%);
+  color: white;
+  padding: 95px 8%;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 7vw, 75px);
+  font-weight: 900;
+  margin-bottom: 18px;
+}
+
+.hero h1 span {
+  color: #ed2929;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #ddd;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background: #ed2929;
+  color: white;
+  padding: 15px 28px;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #c71919;
+}
+
+section {
+  padding: 65px 7%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 35px;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  gap: 16px;
+}
+
+.category {
+  background: #171717;
+  color: white;
+  padding: 27px 12px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.category span {
+  display: block;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.product {
+  background: white;
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px #00000012;
+}
+
+.product img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product-info h3 {
+  margin-bottom: 9px;
+}
+
+.price {
+  color: #e12626;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 12px 0;
+}
+
+.product button {
+  width: 100%;
+}
+
+.about {
+  background: #171717;
+  color: white;
+  text-align: center;
+}
+
+.about p {
+  max-width: 650px;
+  margin: 15px auto;
+  color: #ccc;
+  line-height: 1.8;
+}
+
+.cart {
+  background: #ed2929;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+footer {
+  background: #0c0c0c;
+  color: #aaa;
+  text-align: center;
+  padding: 25px;
+  font-size: 13px;
+}
+
+@media(max-width: 600px) {
+  header {
+    justify-content: center;
+  }
+
+  nav {
+    text-align: center;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 8px;
+  }
+
+  .hero {
+    padding: 65px 7%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">LS <span>SPORTS</span></div>
+
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#categories">Catégories</a>
+    <a href="#produits">Produits</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="cart">🛒 Panier : <span id="count">0</span></div>
+</header>
+
+<div class="hero" id="accueil">
+  <h1>ÉQUIPEZ-VOUS.<br><span>DÉPASSEZ-VOUS.</span></h1>
+  <p>Tout pour votre passion du sport. Tout au même endroit.</p>
+  <a href="#produits" class="btn">DÉCOUVRIR NOS PRODUITS</a>
+</div>
+
+<section id="categories">
+  <h2 class="section-title">NOS CATÉGORIES</h2>
+
+  <div class="categories">
+    <div class="category"><span>👟</span>Chaussures</div>
+    <div class="category"><span>👕</span>Vêtements</div>
+    <div class="category"><span>⚽</span>Football</div>
+    <div class="category"><span>🏀</span>Basketball</div>
+    <div class="category"><span>🥊</span>Boxe</div>
+    <div class="category"><span>🎒</span>Accessoires</div>
+  </div>
+</section>
+
+<section id="produits">
+  <h2 class="section-title">NOS MEILLEURS PRODUITS</h2>
+
+  <div class="products">
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600" alt="Chaussures de sport">
+      <div class="product-info">
+        <h3>Chaussures de sport</h3>
+        <p>Confort et performance pour chaque entraînement.</p>
+        <div class="price">89,99 $</div>
+        <button class="btn" onclick="addCart()">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600" alt="T-shirt sportif">
+      <div class="product-info">
+        <h3>T-shirt sportif</h3>
+        <p>Un style confortable pour vos activités.</p>
+        <div class="price">29,99 $</div>
+        <button class="btn" onclick="addCart()">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1614632537423-1e6c2e7e0f7d?w=600" alt="Ballon de football">
+      <div class="product-info">
+        <h3>Ballon de football</h3>
+        <p>Pour jouer et améliorer vos compétences.</p>
+        <div class="price">34,99 $</div>
+        <button class="btn" onclick="addCart()">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?w=600" alt="Ballon de basketball">
+      <div class="product-info">
+        <h3>Ballon de basketball</h3>
+        <p>Un ballon idéal pour vos matchs.</p>
+        <div class="price">39,99 $</div>
+        <button class="btn" onclick="addCart()">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=600" alt="Gants de boxe">
+      <div class="product-info">
+        <h3>Gants de boxe</h3>
+        <p>Équipement pour vos entraînements de boxe.</p>
+        <div class="price">59,99 $</div>
+        <button class="btn" onclick="addCart()">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600" alt="Sac de sport">
+      <div class="product-info">
+        <h3>Sac de sport</h3>
+        <p>Transportez votre équipement facilement.</p>
+        <div class="price">44,99 $</div>
+        <button class="btn" onclick="addCart()">Ajouter au panier</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="about" id="contact">
+  <h2>À PROPOS DE LS SPORTS</h2>
+  <p>
+    Bienvenue chez LS SPORTS !
+    Notre magasin propose des chaussures,
+    des vêtements et des équipements pour
+    différents sports. Notre objectif est
+    d'aider chaque sportif à atteindre ses objectifs.
+  </p>
+  <p><strong>Merci de visiter notre magasin !</strong></p>
+  <p>Contact : contact@lssports.ca</p>
+</section>
+
+<footer>
+  © 2026 LS SPORTS — Tous droits réservés.
+  <br><br>
+  Équipez-vous. Dépassez-vous.
+</footer>
+
+<script>
+let count = 0;
+
+function addCart() {
+  count++;
+  document.getElementById("count").textContent = count;
+  alert("Produit ajouté au panier !");
+}
+</script>
+
+</body>
+</html>
