@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaussures | LS SPORTS</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #222;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            padding: 22px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 32px;
+        }
+
+        nav {
+            margin-top: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+        }
+
+        .hero {
+            background: #d71920;
+            color: white;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        .hero h2 {
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            padding: 35px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .product {
+            background: white;
+            padding: 18px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 3px 10px #ddd;
+        }
+
+        .product img {
+            width: 100%;
+            height: 190px;
+            object-fit: contain;
+        }
+
+        .product h3 {
+            margin: 15px 0 8px;
+        }
+
+        .price {
+            color: #d71920;
+            font-weight: bold;
+            margin: 12px;
+            font-size: 19px;
+        }
+
+        button {
+            background: #d71920;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background: #a90f15;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin: 10px 0 40px;
+            color: #d71920;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>LS SPORTS</h1>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="index.html#categories">Catégories</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>👟 Collection Chaussures</h2>
+    <p>Équipez-vous. Dépassez-vous.</p>
+</section>
+
+<section class="products">
+
+    <div class="product">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Chaussures de sport">
+        <h3>Chaussures de sport</h3>
+        <p>Confort et style pour vos activités quotidiennes.</p>
+        <p class="price">89,99 $ CAD</p>
+        <button onclick="addCart('Chaussures de sport')">Ajouter au panier</button>
+    </div>
+
+    <div class="product">
+        <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=500" alt="Chaussures de course">
+        <h3>Chaussures de course</h3>
+        <p>Légères et confortables pour courir.</p>
+        <p class="price">79,99 $ CAD</p>
+        <button onclick="addCart('Chaussures de course')">Ajouter au panier</button>
+    </div>
+
+    <div class="product">
+        <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?w=500" alt="Chaussures de basketball">
+        <h3>Chaussures de basketball</h3>
+        <p>Stabilité et confort sur le terrain.</p>
+        <p class="price">99,99 $ CAD</p>
+        <button onclick="addCart('Chaussures de basketball')">Ajouter au panier</button>
+    </div>
+
+</section>
+
+<a class="back" href="index.html">← Retour à l'accueil</a>
+
+<footer>
+    <p>© 2026 LS SPORTS | Tous droits réservés</p>
+</footer>
+
+<script>
+    let cart = 0;
+
+    function addCart(product) {
+        cart++;
+        alert(product + " ajouté au panier ! 👟");
+    }
+</script>
+
+</body>
+</html>
