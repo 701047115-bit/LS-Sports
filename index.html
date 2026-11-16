@@ -4,6 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>LS SPORTS | Le sport commence ici</title>
 
 <style>
@@ -141,12 +142,18 @@ section {
   border-radius: 9px;
   overflow: hidden;
   box-shadow: 0 3px 12px #00000012;
+  transition: 0.2s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
 }
 
 .product img {
   width: 100%;
   height: 210px;
   object-fit: cover;
+  display: block;
 }
 
 .product-info {
@@ -230,7 +237,9 @@ footer {
     <a href="#contact">Contact</a>
   </nav>
 
-  <div class="cart">🛒 Panier : <span id="count">0</span></div>
+  <div class="cart">
+    🛒 Panier : <span id="count">0</span>
+  </div>
 </header>
 
 <div class="hero" id="accueil">
@@ -243,12 +252,30 @@ footer {
   <h2 class="section-title">NOS CATÉGORIES</h2>
 
   <div class="categories">
-    <a href="chaussures.html" class="category"><span>👟</span>Chaussures</a>
-    <a href="vetements.html" class="category"><span>👕</span>Vêtements</a>
-    <a href="football.html" class="category"><span>⚽</span>Football</a>
-    <a href="basketball.html" class="category"><span>🏀</span>Basketball</a>
-    <a href="boxe.html" class="category"><span>🥊</span>Boxe</a>
-    <a href="accessoires.html" class="category"><span>🎒</span>Accessoires</a>
+    <a href="chaussures.html" class="category">
+      <span>👟</span>Chaussures
+    </a>
+
+    <!-- Corrected clothing page filename -->
+    <a href="vetements.htm" class="category">
+      <span>👕</span>Vêtements
+    </a>
+
+    <a href="football.html" class="category">
+      <span>⚽</span>Football
+    </a>
+
+    <a href="basketball.html" class="category">
+      <span>🏀</span>Basketball
+    </a>
+
+    <a href="boxe.html" class="category">
+      <span>🥊</span>Boxe
+    </a>
+
+    <a href="accessoires.html" class="category">
+      <span>🎒</span>Accessoires
+    </a>
   </div>
 </section>
 
@@ -258,7 +285,10 @@ footer {
   <div class="products">
 
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600" alt="Chaussures de sport">
+      <img
+        src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600"
+        alt="Chaussures de sport"
+      >
       <div class="product-info">
         <h3>Chaussures de sport</h3>
         <p>Confort et performance pour chaque entraînement.</p>
@@ -268,7 +298,10 @@ footer {
     </div>
 
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600" alt="T-shirt sportif">
+      <img
+        src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600"
+        alt="T-shirt sportif"
+      >
       <div class="product-info">
         <h3>T-shirt sportif</h3>
         <p>Un style confortable pour vos activités.</p>
@@ -278,7 +311,10 @@ footer {
     </div>
 
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1614632537423-1e6c2e7e0f7d?w=600" alt="Ballon de football">
+      <img
+        src="https://images.unsplash.com/photo-1614632537423-1e6c2e7e0f7d?w=600"
+        alt="Ballon de football"
+      >
       <div class="product-info">
         <h3>Ballon de football</h3>
         <p>Pour jouer et améliorer vos compétences.</p>
@@ -288,7 +324,10 @@ footer {
     </div>
 
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?w=600" alt="Ballon de basketball">
+      <img
+        src="https://images.unsplash.com/photo-1519861531473-9200262188bf?w=600"
+        alt="Ballon de basketball"
+      >
       <div class="product-info">
         <h3>Ballon de basketball</h3>
         <p>Un ballon idéal pour vos matchs.</p>
@@ -298,7 +337,10 @@ footer {
     </div>
 
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=600" alt="Gants de boxe">
+      <img
+        src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=600"
+        alt="Gants de boxe"
+      >
       <div class="product-info">
         <h3>Gants de boxe</h3>
         <p>Équipement pour vos entraînements de boxe.</p>
@@ -308,7 +350,10 @@ footer {
     </div>
 
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600" alt="Sac de sport">
+      <img
+        src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600"
+        alt="Sac de sport"
+      >
       <div class="product-info">
         <h3>Sac de sport</h3>
         <p>Transportez votre équipement facilement.</p>
@@ -322,6 +367,7 @@ footer {
 
 <section class="about" id="contact">
   <h2>À PROPOS DE LS SPORTS</h2>
+
   <p>
     Bienvenue chez LS SPORTS !
     Notre magasin propose des chaussures,
@@ -329,6 +375,7 @@ footer {
     différents sports. Notre objectif est
     d'aider chaque sportif à atteindre ses objectifs.
   </p>
+
   <p><strong>Merci de visiter notre magasin !</strong></p>
   <p>Contact : contact@lssports.ca</p>
 </section>
