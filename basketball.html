@@ -2,126 +2,164 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basketball | LS SPORTS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<title>Basketball | LS SPORTS</title>
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            color: #222;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        header {
-            background: #111;
-            color: white;
-            padding: 22px;
-            text-align: center;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #222;
+}
 
-        header h1 {
-            font-size: 32px;
-        }
+header {
+    background: #111;
+    color: white;
+    padding: 22px;
+    text-align: center;
+}
 
-        nav {
-            margin-top: 12px;
-        }
+header h1 {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 12px;
-        }
+header span {
+    color: #ed2929;
+}
 
-        .hero {
-            background: #d71920;
-            color: white;
-            text-align: center;
-            padding: 55px 20px;
-        }
+nav {
+    margin-top: 12px;
+}
 
-        .hero h2 {
-            font-size: 34px;
-            margin-bottom: 12px;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+}
 
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-            padding: 35px;
-            max-width: 1100px;
-            margin: auto;
-        }
+nav a:hover {
+    color: #ed2929;
+}
 
-        .product {
-            background: white;
-            padding: 18px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 3px 10px #ddd;
-        }
+.hero {
+    background: #d71920;
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
 
-        .product img {
-            width: 100%;
-            height: 190px;
-            object-fit: contain;
-        }
+.hero h2 {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
 
-        .product h3 {
-            margin: 15px 0 8px;
-        }
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    padding: 35px;
+    max-width: 1100px;
+    margin: auto;
+}
 
-        .price {
-            color: #d71920;
-            font-weight: bold;
-            margin: 12px;
-            font-size: 19px;
-        }
+.product {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 10px #ddd;
+    transition: 0.2s;
+}
 
-        button {
-            background: #d71920;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 15px;
-        }
+.product:hover {
+    transform: translateY(-5px);
+}
 
-        button:hover {
-            background: #a90f15;
-        }
+.product img {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    display: block;
+    border-radius: 6px;
+    background: #fff;
+}
 
-        .back {
-            display: block;
-            text-align: center;
-            margin: 10px 0 40px;
-            color: #d71920;
-            font-weight: bold;
-            text-decoration: none;
-        }
+.product h3 {
+    margin: 15px 0 8px;
+}
 
-        footer {
-            background: #111;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+.product p {
+    line-height: 1.5;
+}
+
+.price {
+    color: #d71920;
+    font-weight: bold;
+    margin: 12px;
+    font-size: 19px;
+}
+
+button {
+    background: #d71920;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #a90f15;
+}
+
+.back {
+    display: block;
+    text-align: center;
+    margin: 10px 0 40px;
+    color: #d71920;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media(max-width: 600px) {
+    .products {
+        padding: 20px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>LS SPORTS</h1>
+    <h1>LS <span>SPORTS</span></h1>
+
     <nav>
         <a href="index.html">Accueil</a>
         <a href="index.html#categories">Catégories</a>
@@ -135,45 +173,93 @@
 
 <section class="products">
 
+    <!-- PRODUCT 1: BASKETBALL -->
+
     <div class="product">
-        <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?w=500" alt="Ballon de basketball">
+        <img
+            src="https://images.unsplash.com/photo-1519861531473-9200262188bf?w=700"
+            alt="Ballon de basketball"
+            loading="lazy"
+        >
+
         <h3>Ballon de basketball</h3>
-        <p>Ballon de qualité pour vos entraînements et matchs.</p>
+
+        <p>
+            Ballon de qualité pour vos entraînements et matchs.
+        </p>
+
         <p class="price">39,99 $ CAD</p>
-        <button onclick="addCart('Ballon de basketball')">Ajouter au panier</button>
+
+        <button onclick="addCart('Ballon de basketball')">
+            Ajouter au panier
+        </button>
     </div>
 
+
+    <!-- PRODUCT 2: BASKETBALL SHOES -->
+
     <div class="product">
-        <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?w=500" alt="Chaussures de basketball">
+        <img
+            src="https://www.nicekicks.com/files/2022/11/Lamelo-ball-puma-mb-02-phenom-377644-01-8-1536x1536.jpg"
+            alt="Chaussures de basketball"
+            loading="lazy"
+        >
+
         <h3>Chaussures de basketball</h3>
-        <p>Confort et stabilité sur le terrain.</p>
+
+        <p>
+            Confort et stabilité sur le terrain.
+        </p>
+
         <p class="price">99,99 $ CAD</p>
-        <button onclick="addCart('Chaussures de basketball')">Ajouter au panier</button>
+
+        <button onclick="addCart('Chaussures de basketball')">
+            Ajouter au panier
+        </button>
     </div>
 
+
+    <!-- PRODUCT 3: BASKETBALL JERSEY -->
+
     <div class="product">
-        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=500" alt="Maillot de basketball">
+        <img
+            src="https://images.puma.com/image/upload/f_auto%2Cq_auto%2Cb_rgb%3Afafafa%2Cw_2000%2Ch_2000/global/676628/06/fnd/PHL/fmt/png/Hoops-Team-Basketball-Jersey-Men"
+            alt="Maillot de basketball"
+            loading="lazy"
+        >
+
         <h3>Maillot de basketball</h3>
-        <p>Un maillot sportif pour représenter votre équipe.</p>
+
+        <p>
+            Un maillot sportif pour représenter votre équipe.
+        </p>
+
         <p class="price">44,99 $ CAD</p>
-        <button onclick="addCart('Maillot de basketball')">Ajouter au panier</button>
+
+        <button onclick="addCart('Maillot de basketball')">
+            Ajouter au panier
+        </button>
     </div>
 
 </section>
 
-<a class="back" href="index.html">← Retour à l'accueil</a>
+<a class="back" href="index.html">
+    ← Retour à l'accueil
+</a>
 
 <footer>
     <p>© 2026 LS SPORTS | Tous droits réservés</p>
+    <br>
+    <p>Équipez-vous. Dépassez-vous.</p>
 </footer>
 
 <script>
-    let cart = 0;
+let cart = 0;
 
-    function addCart(product) {
-        cart++;
-        alert(product + " ajouté au panier ! 🏀");
-    }
+function addCart(product) {
+    cart++;
+    alert(product + " ajouté au panier ! 🏀");
+}
 </script>
 
 </body>
